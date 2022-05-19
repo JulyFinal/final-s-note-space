@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "编程迷思.md",
+            "file": "Arch安装指南.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程迷思.md",
+                "file": "Arch安装指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "ba5a7e74803a4238",
   "lastOpenFiles": [
+    "Arch安装指南.md",
+    "编程与开发/arch.md",
+    "编程与开发/zshrc.md",
+    "编程与开发/yay.md",
+    "编程与开发/rime.md",
+    "编程与开发/wayland.md",
     "编程迷思.md",
     "README.md.md",
     "收藏的github仓库.md",
-    "编程与开发/zshrc.md",
-    "编程与开发/zellij.md",
-    "编程与开发/yay.md",
-    "编程与开发/wayland.md",
-    "编程与开发/rime.md",
-    "编程与开发/git.md",
-    "编程与开发/dns.md"
+    "编程与开发/zellij.md"
   ]
 }
