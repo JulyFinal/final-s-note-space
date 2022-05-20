@@ -24,7 +24,7 @@ mount /dev/boot分区 /mnt/boot
 /etc/pacman.d/mirrorlist
 
 # 预放入包程序
-pacstrap /mnt base linux linux-firmware base-devel sudo neovim vi dhcpcd wpa_supplicant networkmanager dolphin bluetooth# xf86-video-intel
+pacstrap /mnt base linux linux-firmware base-devel sudo neovim vi dhcpcd linux-headers wpa_supplicant networkmanager dolphin bluez bluez-utils# xf86-video-intel
 # plasma-meta sddm
 
 # 写入卷标
@@ -36,7 +36,7 @@ arch-chroot /mnt
 # edit sudo
 visudo
 # 开启%wheel ALL=(ALL) ALL
-useradd -G wheel -m final
+useradd -m -G wheel -s /bin/zsh final
 # set passwd
 passwd final
 
@@ -45,6 +45,7 @@ systemctl enable dhcpcd
 systemctl enable wpa_supplicant
 systemctl enable NetworkManager
 systemctl enable bluetooth
+systemctl enable --now bluetooth
 # systemctl enable sddm
 
 # 设置时区
@@ -61,13 +62,22 @@ locale-gen
 # hostname
 /etc/hostname
 # 设置主机名 finalarch
+vim /etc/hosts
+127.0.0.1 localhost 
+::1 localhost 
+127.0.1.1 finalarch
 
 mkinitcpio -P
 # 设置root密码
-passwd
+passwd root
+
+# 安装微码
+pacman -S intel-ucode
 
 # 设置grub
+pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+# 接下来编辑/etc/default/grub 文件，去掉`GRUB_CMDLINE_LINUX_DEFAULT`一行中最后的 quiet 参数，同时把 log level 的数值从 3 改成 5。这样是为了后续如果出现系统错误，方便排错。同时在同一行加入 nowatchdog 参数，这可以显著提高开关机速度。
 grub-mkconfig -o /boot/grub/grub.cfg
 #exit
 # 退出
@@ -91,8 +101,9 @@ sudo pacman-mirrors -c China -m rank
 ```
 
 ### 一般安装
-```
-sudo pacman -S ranger
+```shell
+sudo pacman -S ranger plasma-meta dolphin sddm
+systemctl enable sddm
 ```
 
 

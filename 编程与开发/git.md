@@ -15,5 +15,6 @@ git config --global --unset https.proxy
 
 # 关闭ssl认证
 git config --global http.sslVerify false
-
+# 关闭Https 每次的认证
+git config --global credential.helper store
 ```

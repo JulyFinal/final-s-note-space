@@ -99,3 +99,12 @@ debug:
   # Print all received window events.
   print_events: false
 ```
+
+### SDDM
+```shell
+/usr/lib/sddm/sddm.conf.d/default.conf
+# 修改为
+[Theme] 
+# current theme name 
+Current=breeze
+```
