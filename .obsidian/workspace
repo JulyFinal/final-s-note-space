@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "wine.md",
+            "file": "Arch安装指南.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wine.md",
+                "file": "Arch安装指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,8 +89,8 @@
   },
   "active": "ba5a7e74803a4238",
   "lastOpenFiles": [
-    "wine.md",
     "Arch安装指南.md",
+    "wine.md",
     "编程与开发/alacritty.md",
     "编程与开发/archwsl.md",
     "编程与开发/zellij.md",
