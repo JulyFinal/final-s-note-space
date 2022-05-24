@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Arch安装指南.md",
+            "file": "编程与开发/wayland.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arch安装指南.md",
+                "file": "编程与开发/wayland.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,13 +89,13 @@
   },
   "active": "ba5a7e74803a4238",
   "lastOpenFiles": [
+    "编程与开发/wayland.md",
     "Arch安装指南.md",
     "wine.md",
     "编程与开发/alacritty.md",
     "编程与开发/archwsl.md",
     "编程与开发/zellij.md",
     "编程与开发/zshrc.md",
-    "编程与开发/wayland.md",
     "编程与开发/dns.md",
     "编程与开发/git.md",
     "编程与开发/arch.md"
