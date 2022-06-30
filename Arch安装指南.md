@@ -84,6 +84,12 @@ grub-mkconfig -o /boot/grub/grub.cfg
 umount -R /mnt
 
 
+```
+
+## Other
+### 优化
+
+```
 ## SSD btrfs
 
 # 格式化目标分区为BtrFS
@@ -91,6 +97,10 @@ mkfs.btrfs /dev/sda1
 
 # 挂载目标分区，并打开SSD优化
 mount -t btrfs -o ssd /dev/sda1 /mnt
+
+# 优化SSD
+sudo systemctl enable fstrim.timer						       ## 添加开机自启动，通过Trim 来优化SSD
+sudo systemctl start fstrim.service						       ## 启动服务
 ```
 
 ## 安装后
