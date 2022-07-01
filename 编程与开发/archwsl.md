@@ -1,5 +1,5 @@
 # ArchWSL 指南
-[github ssource](https://github.com/yuk7/ArchWSL)
+[github source](https://github.com/yuk7/ArchWSL)
 ```
 vi /etc/pacman.conf
 // 推荐取消注释 Misc options 中的 Color、CheckSpace 及 VerbosePkgLists 项
